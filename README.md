@@ -16,9 +16,9 @@
 
 ### To install
 
-* pip install continuation_method
+* pip install -i https://test.pypi.org/simple/ continuation-method
 
 ### To plot
-
+* Must be in a Python environment
 * Already existing plot: from MNIST import plotResults
 * Comparison between predictor-corrector algorithm and weighted sum: from MNIST import job
