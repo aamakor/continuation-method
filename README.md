@@ -5,14 +5,14 @@
 *T he Weighted-Sum Algorithm for the deterministic and stochastic approach on MNIST dataset (plots)*
 * The comparison of both algorithms (plots)*
 
-#### continuationTest.py - Contains all the predictor-corrector algorithm for both the MNIST and Iris dataset.
-#### confirguration.yaml- Contains the setting for the predictor-corrector algorithm.
-#### DataLoader.py - Contains functions for processing and loading the datasets.
-#### helperFunctions.py - Contains functions for modifying our predictor-corrector algorithm if needed.
-#### job.py- Contains code for plotting the comparison between weighted sum and predictor-corrector algorithm.
-#### OwnDescent.py - Contains our optimizer code.
-#### plotResults.py - For any visualistions.
-#### weightedsumTest.py- Contains our weighted sum algorithm.
+#### 1. continuationTest.py - Contains all the predictor-corrector algorithm for both the MNIST and Iris dataset.
+#### 2. confirguration.yaml- Contains the setting for the predictor-corrector algorithm.
+#### 3. DataLoader.py - Contains functions for processing and loading the datasets.
+#### 4. helperFunctions.py - Contains functions for modifying our predictor-corrector algorithm if needed.
+#### 5. job.py- Contains code for plotting the comparison between weighted sum and predictor-corrector algorithm.
+#### 6. OwnDescent.py - Contains our optimizer code.
+#### 7. plotResults.py - For any visualistions.
+#### 8. weightedsumTest.py- Contains our weighted sum algorithm.
 
 ### To install
 
