@@ -1,0 +1,37 @@
+# number of runs of continuation method runs
+n_continuation = 1
+# number of points that hopefully belong to the pareto front for grad continuation
+n_pareto = 25
+# number of points that hopefully belong to the pareto front for prox continuation
+n_pareto = 18
+# numper of iterations for prediction for loss
+n_predictor = 30
+# number of training epochs for corrector for loss
+n_corr = 500
+# numper of iterations for prediction for l1-norm
+n_predictor = 30
+# number of training epochs for corrector for l1-norm
+n_corr = 500
+# number of training epochs for first run
+n_corr_first = 10000
+
+Training loss after start iteration = 0.21273095905780792
+Test loss after start iteration = 0.2532345652580261
+L1 norm after start iteration = 0.2862735092639923
+Training accuracy after start iteration = 100.0
+Testing accuracy after start iteration = 95.0
+
+Training loss after grad continuation = 0.17402054369449615
+Test loss after grad continuation = 0.22513900697231293
+L1 norm after grad continuation = 0.29819029569625854
+Training accuracy after grad continuation = 100.0
+Testing accuracy after grad continuation = 95.0
+
+Training loss after prox continuation = 0.4644593596458435
+Test loss after prox continuation = 0.4644593596458435
+L1 norm after prox continuation = 0.19435614347457886
+Training accuracy after prox continuation = 100.0
+Testing accuracy after prox continuation = 100.0
+
+Total computation time for deterministic Train/Test = 184.99427890777588
+

@@ -1,0 +1,9 @@
+include MNIST/*.yaml
+include MNIST/Results/Results_det_0/*.txt
+include MNIST/Results/Results_iris/*.txt
+include MNIST/Results/Results_sto_1/*.txt
+include MNIST/Results/images/*.png
+include MNIST/Results/Results_sto_1/*
+include MNIST/Results/Results_iris/*
+include MNIST/Results/Results_det_0/*
+include MNIST/images/*.png

@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: continuation-method
+Version: 0.0.1
+Summary: Computing and plotting Pareto front for loss and L1-norm (regualrization path)
+Home-page: https://github.com/aamakor/continuation_method
+Author: Amakor Augustina Chidinma
+Author-email: augustina.chidinma.amakor@uni-paderborn.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # Predictor-Corrector Algorithm
 ## MNIST (Contains both the predictor-corrector and weighted sum algorithms for the mnist and iris data.)
 ### This file consists of: 
