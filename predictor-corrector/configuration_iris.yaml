@@ -1,0 +1,27 @@
+#IRIS DATA TRAINING SETTINGS
+
+#***** Number of iterations for the different directions**********************#
+
+# number of runs for the predictor-corrector algorithm (CM)
+n_continuation: 1
+
+# number of training epochs for first run to obtain initial point on the front
+n_corr_first: 10000 
+
+
+#******L1-norm objective**********
+# number of points that hopefully belong to the pareto front 
+n_pareto_prox: 2
+# number of iterations for predictor step (shrinkage)
+n_predictor:  10000
+# Set number of training epochs for corrector step (Algorithm 1) for L1 objective function
+n_corr: 200
+
+
+#******loss objective**********
+# number of points that hopefully belong to the pareto front (loss objective)
+n_pareto_grad: 40
+# number of iterations for predictor step (gradient)
+n_predictor_loss: 10000
+#number of iterations for corrector step (Algorithm 1)
+n_corrector_loss: 200

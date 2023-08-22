@@ -1,0 +1,8 @@
+
+Training loss for weighted sum = 0.04482023045420647
+Test loss for weighted sum = 0.2731504738330841
+Training accuracy for weighted sum = 98.82678571428572
+Testing accuracy for weighted sum= 94.94285714285714
+
+Total computation time for deterministic Train/Test = 1140.0690224170685
+
