@@ -1,0 +1,29 @@
+# number of runs of continuation method runs
+n_continuation = 1
+# number of points that hopefully belong to the pareto front for grad continuation
+n_pareto = 10
+# number of points that hopefully belong to the pareto front for prox continuation
+n_pareto = 10
+# numper of iterations for prediction for loss
+n_predictor = 7
+# number of training epochs for corrector for loss
+n_corr = 25
+# numper of iterations for prediction for l1-norm
+n_predictor = 2
+# number of training epochs for corrector for l1-norm
+n_corr = 25
+# number of training epochs for first run
+n_corr_first = 2000
+
+Training loss after start iteration = 1.6486091613769531
+Test loss after start iteration = 1.6340192556381226
+L1 norm after start iteration = 16.48609161376953
+
+Training loss after grad continuation = 1.557489275932312
+Test loss after grad continuation = 1.5455116033554077
+L1 norm after grad continuation = 25.336023330688477
+
+Training loss after prox continuation = 2.139160633087158
+Test loss after prox continuation = 2.127805233001709
+L1 norm after prox continuation = 3.614212989807129
+

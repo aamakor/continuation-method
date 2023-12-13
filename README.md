@@ -55,4 +55,23 @@
     * Matplotlib
     * Keras (load data)
 
+## cifar10 folder: (Contains both the predictor-corrector and weighted sum algorithms for the CIFAR10 dataset.)
 
+Note:
+* All experiments on the CIFAR10 datasets were performed on GPU with Python 3.11.5. Details of the cluster specification can be seen in our paper.
+
+#### cm_cifar10.py
+    Contains all the functions required to compile the predictor-corrector algorithm
+
+#### ws_cifar10.py
+    Contains all the functions required to compile the weighted sum algorithm
+
+#### plotResults.py
+    Contains functions for various visualisations.
+
+### Results :-
+    This folder contains the outputs/results for:
+        1.  stochastic CM on CIFAR10 dataset (Results_cm_sto).
+        2. stochastic WS on CIFAR10 dataset (Results_ws_sto).
+### images :-
+    This is the folder where all the images plotted are saved.

@@ -1,0 +1,8 @@
+
+Training loss for weighted sum = 1.1076496839523315
+Test loss for weighted sum = 1.6948902606964111
+Training accuracy for weighted sum = 60.952083333333334
+Testing accuracy for weighted sum= 41.625
+
+Total computation time for stochastic Train/Test = 545.0933470726013
+
