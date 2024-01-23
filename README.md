@@ -1,4 +1,6 @@
 # Predictor-Corrector Algorithm
+This repository contains the implementation of our algorithm (predictor-corrector (CM) algorithm) in used for efficiently finding Pareto optimal points (Pareto front) as detailed in our paper [[1]](#1) and its comparison with the weighted sum method and evolutionary algorithm.
+
 ## predictor-corrector folder: (Contains both the predictor-corrector and weighted sum algorithms for the mnist and iris datasets.)
 ### This file contains the following: 
 * The predictor-corrector algorithm for the deterministic and stochastic approach on Iris and MNIST dataset respectively (plots).
@@ -6,12 +8,16 @@
 * The comparison of both algorithms for the MNIST dataset (plots). 
 
 
-    <img src="predictor-corrector/images/pareto_image.png" alt="plot" width="400"/>
+    <figure>
 
-    Note :
-    * While experimenting on our algorithm using the Iris dataset on deterministic setting, some specific configurations were made such as starting very close to zero.
-    * The main file is job.py
-    * Ensure you are in the right "directory" before compilation.
+  <img src="predictor-corrector/images/pareto_image.png" alt="plot" width="400"/>
+  <figcaption>Figure 1: Sketch of the continuation method. The predictor steps are shown in black and blue for gradient and shrinkage steps respectively. The corrector step is shown in red.</figcaption>
+</figure>
+
+Note :
+* While experimenting on our algorithm using the Iris dataset on deterministic setting, some specific configurations were made such as starting very close to zero.
+* The main file is job.py
+* Ensure you are in the right "directory" before compilation.
 
 
 | Index | file_names | Description            |
@@ -87,3 +93,11 @@ This folder contains the outputs/results as .txt files for:
 Shuffled indices for the Iris dataset data loading.
 ### images
 This is the folder where all the images plotted are saved.
+
+
+## References
+<a id="1">[1]</a> 
+Amakor, Augustina C., Konstantin Sontag, and Sebastian Peitz. "A multiobjective continuation method to compute the regularization path of deep neural networks." arXiv preprint arXiv:2308.12044 (2023).
+
+<a id="2">[2]</a> 
+Blank, Julian, and Kalyanmoy Deb. "Pymoo: Multi-objective optimization in python." Ieee access 8 (2020): 89497-89509.
