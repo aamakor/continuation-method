@@ -1,18 +1,18 @@
 # Predictor-Corrector Algorithm
-This repository contains the implementation of our algorithm (predictor-corrector (CM) algorithm) in used for efficiently finding Pareto optimal points (Pareto front) as detailed in our paper [[1]](#1) and its comparison with the weighted sum method and evolutionary algorithm.
+This repository contains the implementation of our algorithm (predictor-corrector (CM) algorithm) used for efficiently finding Pareto optimal points (Pareto front) as detailed in our paper [[1]](#1) and its comparison with the weighted sum method and evolutionary algorithm.
 
 ## predictor-corrector folder: (Contains both the predictor-corrector and weighted sum algorithms for the mnist and iris datasets.)
 ### This file contains the following: 
-* The predictor-corrector algorithm for the deterministic and stochastic approach on Iris and MNIST dataset respectively (plots).
-* The Weighted-Sum Algorithm for the stochastic approach on MNIST dataset (plots).
+* The predictor-corrector algorithm for the deterministic and stochastic approach on Iris and MNIST datasets respectively (plots).
+* The Weighted-Sum Algorithm for the stochastic approach on the MNIST dataset (plots).
 * The comparison of both algorithms for the MNIST dataset (plots). 
 
-
     <figure>
-
-  <img src="predictor-corrector/images/pareto_image.png" alt="plot" width="400"/>
-  <figcaption>Figure 1: Sketch of the continuation method. The predictor steps are shown in black and blue for gradient and shrinkage steps respectively. The corrector step is shown in red.</figcaption>
+  <img src="predictor-corrector/images/pareto_image.png" alt="plot" width="500"/>
+        <br>
+  <figcaption>Figure 1: Sketch of the continuation method for the predictor-corrector algorithm. The predictor steps are shown in black and blue for the gradient and shrinkage steps respectively. The corrector step is shown in red.</figcaption>
 </figure>
+
 
 Note :
 * While experimenting on our algorithm using the Iris dataset on deterministic setting, some specific configurations were made such as starting very close to zero.
@@ -28,7 +28,7 @@ Note :
 | 4     | `DataLoader.py`     | Contains functions for processing and loading the datasets. |
 | 5     | `functions.py`     | Contains the algorithm of the predictor-corrector method for the deterministic and  stochastic settings. |
 | 6     | `helperFunctions.py`     | Contains help functions for modifying our predictor-corrector algorithm when needed.  |
-| 7     | `job.py`     | This is the main file that compiles all the other files and return the different Pareto front plots (run this file to see results and plots).  |
+| 7     | `job.py`     | This is the main file that compiles all the other files and returns the different Pareto front plots (run this file to see results and plots).  |
 | 8     | `OwnDescent.py`     | Contains our multiobjective proximal gradient optimizer class code.  |
 | 9     | `perm.txt`     | Shuffled indices for the Iris dataset data loading. |
 | 10     | `plotResults.py`     | Contains functions for various visualisations. |
@@ -36,7 +36,7 @@ Note :
 
 
 ### Results_reference 
-This folder consists of results obtain to form a baseline, where we have executed Algorithm 2 using very small step sizes. Interestingly, the Pareto set and front consist of multiple components, which we were only able to find by repeated application of the continuation method with random initial conditions (multi-start).
+This folder consists of results obtained to form a baseline, where we have executed Algorithm 2 using very small step sizes. Interestingly, the Pareto set and front consist of multiple components, which we were only able to find by repeated application of the continuation method with random initial conditions (multi-start).
 
 ### Results
 This folder contains the outputs/results for:
@@ -81,9 +81,9 @@ This is the folder where all the images plotted are saved.
 
 | Index | file_names  | Description            |
 | ----- | ----------- | ---------------------- |
-| 1     | `EA_Iris.ipynb`     | Jupyter notebook containing all the functions and parameters required to compile the evolutionary algorithm for Iris dataset. |
-| 2     | `EA_mnist.ipynb`     | Jupyter notebook containing all the functions and parameters required to compile the evolutionary algorithm for MNIST dataset.  |
-| 3     | `plotResults.py`     | Contains functions for various visualisations of the evolutionary algorithm and comparsions with predictor-corrector algorithm and weighted sum method. |
+| 1     | `EA_Iris.ipynb`     | Jupyter notebook containing all the functions and parameters required to compile the evolutionary algorithm for the Iris dataset. |
+| 2     | `EA_mnist.ipynb`     | Jupyter notebook containing all the functions and parameters required to compile the evolutionary algorithm for the MNIST dataset.  |
+| 3     | `plotResults.py`     | Contains functions for various visualizations of the evolutionary algorithm and comparisons with the predictor-corrector algorithm and weighted sum method. |
 
 ### Results
 This folder contains the outputs/results as .txt files for:
