@@ -27,12 +27,12 @@ directory = os.path.join(current_script_directory, target_folder)
 
 
 def plot_dt_cmea():
-
+    
     """Performs the plotting of the pareto front
     for the evolutionary algorthm (EA) for the Iris dataset
     """
     #X_pareto_front = np.loadtxt('Results/iris_X_pareto_front.txt')
-    F_pareto_front = np.loadtxt('Results/iris_F_pareto_front.txt')
+    F_pareto_front = np.loadtxt('EA/Results/iris_F_pareto_front.txt')
     directory_names = [dir for dir in os.walk(directory)]
     #print(directory_names)
     directory_names = [dir[0] for dir in directory_names[1:2:]]
@@ -97,7 +97,7 @@ def plot_dt_cmea():
          
     # Plot the data as a line with markers
     plt.plot(good_pareto_loss, good_pareto_L1,"-o", color= cmyk_black, label = "train(CM)" , linewidth = 4, markersize= 8)
-    plt.plot(F_pareto_front[:, 0], F_pareto_front[:, 1],"-o", color= cmyk_blue, label = "train (EA)" , linewidth = 4, markersize= 8)
+    plt.plot(sorted(F_pareto_front[:, 0], reverse=True), sorted(F_pareto_front[:, 1]),"-o", color= cmyk_blue, label = "train (NSGA-II)" , linewidth = 4, markersize= 8)
 
     # Plot the intersection point with a different color
     #plt.plot(good_pareto_loss[intersection_index], good_pareto_L1[intersection_index], 'o', color=cmyk_red, markersize=8, label='initial point')
@@ -111,7 +111,7 @@ def plot_dt_cmea():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/DeterEA_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
+    plt.savefig("EA/images/DeterEA_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
                 bbox_inches="tight", pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -132,11 +132,11 @@ def plot_dt_cmea_mnist():
     evolutionary algorithm (EA) for the MNIST dataset
     """
     #X_pareto_front = np.loadtxt('Results/iris_X_pareto_front.txt')
-    F_pareto_front = np.loadtxt('Results/mnist_F_pareto_front.txt')   
+    F_pareto_front = np.loadtxt('EA/Results/mnist_F_pareto_front.txt')   
 
     # Plot the data as a line with markers
     #plt.plot(good_pareto_loss, good_pareto_L1,"-o", color= cmyk_black, label = "train(CM)" , linewidth = 4, markersize= 8)
-    plt.plot(F_pareto_front[:, 0], F_pareto_front[:, 1],"-o", color= cmyk_blue, label = "train (EA)" , linewidth = 4, markersize= 8)
+    plt.plot(sorted(F_pareto_front[:, 0], reverse=True), sorted(F_pareto_front[:, 1]),"-o", color= cmyk_blue, label = "train (NSGA-II)" , linewidth = 4, markersize= 8)
    
 
     # Plot the intersection point with a different color
@@ -151,7 +151,7 @@ def plot_dt_cmea_mnist():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/StochEA_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
+    plt.savefig("EA/images/StochEA_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
                 bbox_inches="tight", pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -167,7 +167,7 @@ def plot_comp_cmwsea():
     EA and WS (i.e., Pareto front training dataset stochastic setting).
     """
     #X_pareto_front = np.loadtxt('evolutionary-algo/Results/mnist_X_pareto_front.txt')
-    F_pareto_front = np.loadtxt('Results/mnist_F_pareto_front.txt')
+    F_pareto_front = np.loadtxt('EA/Results/mnist_F_pareto_front.txt')
     directory_names = [dir for dir in os.walk(directory)]
     directory_names_cm = [dir[0] for dir in directory_names[2::3]]
     directory_names_ws = [dir[0] for dir in directory_names[3::]]
@@ -242,7 +242,7 @@ def plot_comp_cmwsea():
 
     plt.plot(good_pareto_loss, good_pareto_L1,"-o", color= cmyk_black, label = "train (CM)" , linewidth = 4, markersize= 6 )
     #plt.plot(good_pareto_test_loss, good_pareto_L1,"-o", color= cmyk_red, label = "test (CM)" , linewidth = 4, markersize= 10 )
-    plt.plot(F_pareto_front[:, 0], F_pareto_front[:, 1],"-o", color= cmyk_blue, label = "train (EA)" , linewidth = 4, markersize= 8)
+    plt.plot(sorted(F_pareto_front[:, 0], reverse=True), sorted(F_pareto_front[:, 1]),"-o", color= cmyk_blue, label = "train (NSGA-II)" , linewidth = 4, markersize= 8)
     #plt.scatter(F_pareto_front[:, 0], F_pareto_front[:, 1], s=30, facecolors='none', edgecolors='blue', label = "train (EA)")
     plt.plot(train_loss_values_ws,l1_norm_values_ws , 'X', color= cmyk_red, label='train (WS)', linewidth = 4, markersize=6, markeredgewidth=2)
     #plt.plot(test_loss_values_ws,l1_norm_values_ws, 'X', color= cmyk_red, label='test (WS)', linewidth = 4, markersize= 10)
@@ -256,7 +256,7 @@ def plot_comp_cmwsea():
     plt.legend(prop = { "size": 15 })
     #plt.tight_layout()
     
-    plt.savefig("images/Allea_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
+    plt.savefig("EA/images/Allea_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
