@@ -15,7 +15,7 @@ cmyk_gray = (0, 0, 0, 0.4)
 
 
 
-directory = os.path.join(os.getcwd(), 'Results')
+directory = os.path.join(os.getcwd(), 'predictor-corrector/Results')
 
 # **********Plot for deterministic setting predictor-corrector method (CM) for Iris dataset****************
 def plot_dt_cm():
@@ -25,7 +25,7 @@ def plot_dt_cm():
     """
     directory_names = [dir for dir in os.walk(directory)]
     directory_names = [dir[0] for dir in directory_names[1:2:]]
-    #print([dir for dir in directory_names])
+    print([dir for dir in directory_names])
 
     for directory_name in directory_names:
 
@@ -123,7 +123,7 @@ def plot_dt_cm():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/Deter_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/Deter_Continuation_Pareto_front_Ir", dpi='figure', format=None, metadata=None,
                 bbox_inches="tight", pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -140,7 +140,7 @@ def plot_reference_pf():
     plt.xlabel("$\\ell^1$ norm", fontsize = 20)
     plt.title("Reference Pareto front for Iris", fontweight = 'bold')
 
-    directory = os.path.join(os.getcwd(), 'Results_reference')
+    directory = os.path.join(os.getcwd(), 'predictor-corrector/Results_reference')
 
     directory_names = [dir for dir in os.walk(directory)]
     directory_names = [dir[0] for dir in directory_names[1::]]
@@ -161,7 +161,7 @@ def plot_reference_pf():
 
     plt.grid(visible=True, which='major', axis='both')
 
-    plt.savefig("images/reference_Pareto_front", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/reference_Pareto_front", dpi='figure', format=None, metadata=None,
             bbox_inches=None, pad_inches=0.1,
             facecolor='auto', edgecolor='auto',
             backend=None)
@@ -185,7 +185,7 @@ def plot_iris_reference_vs_cm():
     plt.title("Reference vs Approximated Pareto front for Iris", fontweight = 'bold')
     plt.xticks(fontsize = 15)
     plt.yticks(fontsize = 15)
-    directory = os.path.join(os.getcwd(), 'Results_reference')
+    directory = os.path.join(os.getcwd(), 'predictor-corrector/Results_reference')
 
     directory_names = [dir for dir in os.walk(directory)]
     directory_names = [dir[0] for dir in directory_names[1::]]
@@ -205,7 +205,7 @@ def plot_iris_reference_vs_cm():
         plt.plot(train_loss_Pareto, L1NormPareto, color = cmyk_blue, linewidth = 4)
     plt.plot(train_loss_Pareto, L1NormPareto, color = cmyk_blue, linewidth = 4, label = "reference Pareto front")
     
-    directory = os.path.join(os.getcwd(), 'Results')
+    directory = os.path.join(os.getcwd(), 'predictor-corrector/Results')
 
     directory_names = [dir for dir in os.walk(directory)]
     directory_names = [dir[0] for dir in directory_names[1:2:]]
@@ -244,7 +244,7 @@ def plot_iris_reference_vs_cm():
         plt.plot(train_loss_corr_prox_all, L1Norm_corr_prox_all, color = cmyk_red, marker = 'o', markersize = 6, linewidth = 0)
 
     plt.grid(visible=True, which='major', axis='both')
-    plt.savefig("images/Reference_vs_Approximated_Pareto_front", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/Reference_vs_Approximated_Pareto_front", dpi='figure', format=None, metadata=None,
             bbox_inches='tight', pad_inches=0.1,
             facecolor='auto', edgecolor='auto',
             backend=None)
@@ -341,7 +341,7 @@ def plot_sto_cm():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/Stoch_Continuation_Pareto_front", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/Stoch_Continuation_Pareto_front", dpi='figure', format=None, metadata=None,
                 bbox_inches="tight", pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -358,7 +358,7 @@ def plot_sto_cm():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/Accuracy_Continuation_Pareto_front", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/Accuracy_Continuation_Pareto_front", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -405,7 +405,7 @@ def plot_sto_ws():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/WS_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/WS_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -422,7 +422,7 @@ def plot_sto_ws():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/WS_Accuracy_Plot", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/WS_Accuracy_Plot", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -520,7 +520,7 @@ def plot_comp_cmws():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/All_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/All_Paretofront_Stochastic", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)
@@ -539,7 +539,7 @@ def plot_comp_cmws():
     plt.grid(visible=True, which='major', axis='both')
     plt.legend(prop = { "size": 15 })
     plt.tight_layout()
-    plt.savefig("images/All_Accuracy_Plot", dpi='figure', format=None, metadata=None,
+    plt.savefig("predictor-corrector/images/All_Accuracy_Plot", dpi='figure', format=None, metadata=None,
                 bbox_inches='tight', pad_inches=0.1,
                 facecolor='auto', edgecolor='auto',
                 backend=None)

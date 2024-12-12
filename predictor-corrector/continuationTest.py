@@ -150,7 +150,7 @@ def continuation_methodIris(X_train_ir, y_train_ir, X_test_ir, y_test_ir):
     #store values
 
     # Parent Directory path
-    parent_dir = os.path.join(os.getcwd(), 'Results')
+    parent_dir = os.path.join(os.getcwd(), 'predictor-corrector/Results')
 
     directory_names = [dir for dir in os.walk(parent_dir)]
     directory_names = [dir[0] for dir in directory_names[1::]]
@@ -321,7 +321,7 @@ def continuation_methodMNIST_stochastic(X_train_m,y_train_m, X_test_m,y_test_m  
         # store values
 
     # Parent Directory path
-    parent_dir = os.path.join(os.getcwd(), 'Results')
+    parent_dir = os.path.join(os.getcwd(), 'predictor-corrector/Results')
 
     directory_names = [dir for dir in os.walk(parent_dir)]
     directory_names = [dir[0] for dir in directory_names[1::]]

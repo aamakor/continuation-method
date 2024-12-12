@@ -56,7 +56,7 @@ def load_data_iris():
     X_scaled = scaler.fit_transform(X)
     # Split the data set into training and testing
     N = len(X_scaled[:,1])
-    P = np.loadtxt('perm.txt', dtype=int)
+    P = np.loadtxt('predictor-corrector/perm.txt', dtype=int)
     X_scaled = np.array([X_scaled[i, :] for i in P])
     y = np.array([y[i] for i in P])
     I = range(0,N,5) # 80-20 ratio (train and test sets)

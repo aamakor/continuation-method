@@ -25,18 +25,24 @@ Note :
 | 1     | `configuration_iris.yaml`     | Contains the setting for the predictor-corrector algorithm Iris dataset.   |
 | 2     | `configuration.yaml`     | Contains the setting for the predictor-corrector algorithm MNIST dataset.   |
 | 3     | `continuationTest.py`     | Contains the training on MNIST and Iris datasets using the predictor-corrector algorithms.  |
-| 4     | `DataLoader.py`     | Contains functions for processing and loading the datasets. |
-| 5     | `functions.py`     | Contains the algorithm of the predictor-corrector method for the deterministic and  stochastic settings. |
-| 6     | `helperFunctions.py`     | Contains help functions for modifying our predictor-corrector algorithm when needed.  |
-| 7     | `job.py`     | This is the main file that compiles all the other files and returns the different Pareto front plots (run this file to see results and plots).  |
-| 8     | `OwnDescent.py`     | Contains our multiobjective proximal gradient optimizer class code.  |
-| 9     | `perm.txt`     | Shuffled indices for the Iris dataset data loading. |
-| 10     | `plotResults.py`     | Contains functions for various visualisations. |
-| 11     | `weightedsumTest.py`     | Contains the weighted sum algorithm. |
+| 4     | `continuationTestCV.py`     | Contains the training on MNIST using Stratified 5-fold Cross validation  on the predictor-corrector algorithms.  |
+| 5     | `DataLoader.py`     | Contains functions for processing and loading the datasets. |
+| 6     | `functions.py`     | Contains the algorithm of the predictor-corrector method for the deterministic and  stochastic settings. |
+| 7     | `functionsCV.py`     | Contains the algorithm of the Cross validation stochastic settings. |
+| 8     | `helperFunctions.py`     | Contains help functions for modifying our predictor-corrector algorithm when needed.  |
+| 9     | `job.py`     | This is the main file that compiles all the other files and returns the different Pareto front plots (run this file to see results and plots).  |
+| 10     | `OwnDescent.py`     | Contains our multiobjective proximal gradient optimizer class code.  |
+| 11     | `perm.txt`     | Shuffled indices for the Iris dataset data loading. |
+| 12     | `plotResults.py`     | Contains functions for various visualisations. |
+| 13     | `plotResultsCV.py`     | Contains functions for visualisations of the Stratified 5-fold Cross validation. |
+| 14     | `weightedsumTest.py`     | Contains the weighted sum algorithm. |
 
 
 ### Results_reference 
 This folder consists of results obtained to form a baseline, where we have executed Algorithm 2 using very small step sizes. Interestingly, the Pareto set and front consist of multiple components, which we were only able to find by repeated application of the continuation method with random initial conditions (multi-start).
+
+### Results_CV
+This folder contains the outputs/results for the stratified 5-fold cross validation on the MNIST dataset.
 
 ### Results
 This folder contains the outputs/results for:

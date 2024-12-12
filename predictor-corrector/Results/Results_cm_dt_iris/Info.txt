@@ -33,5 +33,5 @@ L1 norm after prox continuation = 0.0
 Training accuracy after prox continuation = 30.0
 Testing accuracy after prox continuation = 30.0
 
-Total computation time for deterministic Train/Test = 29.57177996635437
+Total computation time for deterministic Train/Test = 36.25530457496643
 
